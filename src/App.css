@@ -1,0 +1,26 @@
+body{
+  background: rgb(41, 41, 63);
+  width: 100%;
+}
+.all_sections{
+ display:grid;
+ grid-template-columns: 20% 80%;
+ width: 90%;
+ height: 90vh;
+ background: white;
+ margin-left: auto;
+ margin-right: auto;
+ border-radius: 20px;
+}
+.section_one{
+  
+  margin: 10px;
+  border-top-left-radius:20px;
+  border-bottom-left-radius:20px;
+  background-color: white;
+  border-right: 1px solid rgba(0, 0, 0, 0.171);
+}
+.section_two{
+  background-color: white;
+  margin: 10px;
+} 
