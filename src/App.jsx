@@ -10,14 +10,35 @@ function App() {
     
       <section className='all_sections'>
         <section className='section_one'>
-          <h1>SMS Zanneer</h1>
+          <h1>SMS Zanner</h1>
+          <div className='all_tiltles_and_icons'>
+          <div>
+          <FontAwesomeIcon icon={faEnvelope} className='icon'/>
+          <p>anonce</p>
+          </div>
+          <div>
+          <FontAwesomeIcon icon={faEnvelope} className='icon'/>
+          <p>anonce</p>
+          </div>
+          <div>
+          <FontAwesomeIcon icon={faEnvelope} className='icon'/>
+          <p>anonce</p>
+          </div>
+          <div>
+          <FontAwesomeIcon icon={faEnvelope} className='icon'/>
+          <p>anonce</p>
+          </div>
+          <div>
+          <FontAwesomeIcon icon={faEnvelope} className='icon'/>
+          <p>anonce</p>
+          </div>
+
+          </div>
+        
         </section>
         <section className='section_two'>
           <h1>Dashboar</h1>
-          <FontAwesomeIcon icon={faEnvelope} />
-          <FontAwesomeIcon icon="fa-regular fa-square-caret-down" />
-           <FontAwesomeIcon icon="fa-brands fa-square-facebook" />
-
+        
         </section>
       </section>
       

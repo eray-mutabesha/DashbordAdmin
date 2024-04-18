@@ -1,5 +1,5 @@
 body{
-  background: rgb(41, 41, 63);
+  background: rgb(0, 0, 20);
   width: 100%;
 }
 .all_sections{
@@ -24,3 +24,20 @@ body{
   background-color: white;
   margin: 10px;
 } 
+.section_one h1{
+  text-align: center;
+}
+.all_tiltles_and_icons div{
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+}
+.all_tiltles_and_icons div:hover{
+  background-color: rgba(0, 0, 43, 0.568);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.all_tiltles_and_icons div .icon{
+  margin-top:auto;
+  margin-bottom: auto;
+}
