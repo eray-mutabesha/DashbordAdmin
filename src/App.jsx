@@ -32,7 +32,10 @@ function App() {
           <FontAwesomeIcon icon={faEnvelope} className='icon'/>
           <p>anonce</p>
           </div>
-
+          <nav className='btn'>
+          <button>Logout</button>
+          </nav>
+            
           </div>
         
         </section>
