@@ -20,11 +20,9 @@ body{
   margin: 10px;
   border-top-left-radius:20px;
   border-bottom-left-radius:20px;
-  /* background-color: white; */
   border-right: 1px solid rgba(0, 0, 0, 0.171);
 }
 .section_two{
-  /* background-color: white; */
   margin: 10px;
 } 
 .section_one h1{
@@ -50,11 +48,48 @@ body{
   color: white;
   border: none;
   outline: none;
-  background-color: rgb(0, 0, 43);
+  background:rgb(0, 0, 20);
   height: 30px;
   border-radius: 5px;
   margin-top: 150px;
 } 
 .all_tiltles_and_icons button:hover{
-  background-color: rgba(0, 0, 43, 0.788);
+   background-color: rgba(0, 0, 43, 0.788); 
+   
+}
+/*.............................................................................................. */
+/*.........................................section two..................................................... */
+.section_two .flex{
+ display:flex;
+ text-align: justify;
+}
+.section_two .flex div .dashboard_p{
+   width: 70%;
+   
+   
+}
+.section_two .flex .cominique{
+  background-image: url("abstract-technology-digital-concept-futuristic-dots-spread-particles-on-neon-colors-background-vector.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%; 
+  border-radius: 10px;
+  width: 400px;
+  margin: 10px;
+  color: rgba(255, 255, 255, 0.822);
+}
+.section_two .flex .cominique p{
+  margin: 10px;
+
+}
+.section_two .flex .cominique button{
+  margin: 10px;
+  background: white;
+  background: linear-gradient(45deg, rgb(66, 66, 255), rgb(248, 83, 83));
+  outline: none;
+  border: 1px solid white;
+  height: 25px;
+  width: 100px;
+  border-radius: 5px;
+
 }

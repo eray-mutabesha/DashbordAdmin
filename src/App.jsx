@@ -40,7 +40,26 @@ function App() {
         
         </section>
         <section className='section_two'>
-          <h1>Dashboar</h1>
+          <div className='flex'>
+          <div>
+            <h1>Dashboard</h1>
+            <p className='dashboard_p'>Tableau de bord de l'administrateur.
+             Retrouvez ici le resumé de tout ce qui se passe dans votre école.</p>
+          </div>
+          <div className='grid'>
+          <div className='cominique'>
+            <p><strong>Communiqué du 2024-04-08 21:30:08</strong>
+            <strong>Rappel des Consignes et Soutien pour une Année Réussie</strong>
+            Chers Élèves, Nous espérons que vous vous porte...</p>
+
+            <button>lire plus</button>
+          </div>
+      
+          </div>
+         
+          </div>
+          
+          
         
         </section>
       </section>
