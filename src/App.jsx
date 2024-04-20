@@ -35,9 +35,7 @@ function App() {
           <nav className='btn'>
           <button>Logout</button>
           </nav>
-            
           </div>
-        
         </section>
         <section className='section_two'>
           <div className='flex'>
@@ -54,9 +52,31 @@ function App() {
 
             <button>lire plus</button>
           </div>
-      
           </div>
-         
+          </div>
+          <div>
+            <h1>Statistiques des eleves</h1>
+            <div className='all_stat'>
+              <nav>
+              <h2>Statistique</h2>
+              <p>Estimation des nos eleves fille et garcon</p>
+              <p> </p>
+              </nav>
+              
+              <div>
+                <nav><FontAwesomeIcon icon={faEnvelope} className='icon'/></nav>
+
+              </div>
+              <div>
+              <nav><FontAwesomeIcon icon={faEnvelope} className='icon'/></nav>
+                
+                </div>
+                <div>
+                <nav><FontAwesomeIcon icon={faEnvelope} className='icon'/></nav>
+                
+                </div>
+              
+            </div>
           </div>
           
           
