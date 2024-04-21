@@ -2,9 +2,27 @@
 import './App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-
+import { useEffect } from 'react'
 function App() {
- 
+  const progress_value = document.querySelector('.progress_value')
+  const circular_progress = document.querySelector('.circular_progress')
+
+
+  let progressStartvalue=0;
+  let progressEndvalue=90;
+  let progress=setInterval(()=>{
+    progressStartvalue++;
+    progress_value.textContent=`${progressStartvalue}%`
+    circular_progress.style.background=`conic-gradient(#7d2ae8 ${progressStartvalue * 3.6}deg,#e9e0e0 0deg)`
+    if(progressStartvalue==progressEndvalue){
+       clearInterval( progress);
+    }
+  },100)
+    
+   
+    
+  
+  
 
   return (
     
@@ -64,16 +82,24 @@ function App() {
               </nav>
               
               <div>
-                <nav><FontAwesomeIcon icon={faEnvelope} className='icon'/></nav>
+                <nav className='icon_nav'><FontAwesomeIcon icon={faEnvelope} className='icon'/></nav>
+                
+                  <nav className='circular_progress' >
+                       <span className='progress_value' ></span>
+                  </nav>
 
               </div>
               <div>
-              <nav><FontAwesomeIcon icon={faEnvelope} className='icon'/></nav>
-                
+              <nav className='icon_nav'><FontAwesomeIcon icon={faEnvelope} className='icon'/></nav>
+              <nav className='circular_progress'>
+                       <span className='progress_value'>40%</span>
+                  </nav>
                 </div>
                 <div>
-                <nav><FontAwesomeIcon icon={faEnvelope} className='icon'/></nav>
-                
+                <nav className='icon_nav'><FontAwesomeIcon icon={faEnvelope} className='icon'/></nav>
+                <nav className='circular_progress'>
+                       <span className='progress_value'>100%</span>
+                  </nav>
                 </div>
               
             </div>

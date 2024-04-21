@@ -109,9 +109,10 @@ body{
   margin-top: auto;
   margin-bottom: auto;
   border-radius: 10px;
+  
 
 }
-.all_stat div nav{
+.all_stat div .icon_nav{
   margin-top: -20px;
   margin-left: auto;
   margin-right: auto;
@@ -125,4 +126,32 @@ body{
 .all_stat div nav .icon{
  margin-top:15px;
  
+}
+
+.circular_progress{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  border-radius: 50%;
+  margin: 40px auto;
+  background:conic-gradient(#7d2ae8 3.6deg,#e9e0e0 0deg); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circular_progress::before{
+  content: "";
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  border-radius: 50%;
+  margin: 40px auto;
+
+  background: rgb(172, 172, 179);
+}
+.progress_value{
+ color:white;
+ font-size: 30px;
+ font-weight: 600;
+ position: relative;
 }
