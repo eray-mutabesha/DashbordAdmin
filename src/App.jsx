@@ -2,36 +2,37 @@
 import './App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import React, { useEffect } from 'react';
+import React, { useEffect,useRef} from 'react';
 function App() {
-  const progress_value = document.querySelector('.progress_value');
-  const circular_progress = document.querySelector('.circular_progress');
-
+  const circular_progress= useRef(null);
+  const progress_value = useRef(null);
   
-  let progressStartvalue=0;
-  // let progressEndvalue=90;
-  
-
  
-    useEffect(() => {
+  useEffect(() => {
+    let  progressStartvalue=0;
       const progress=setInterval(()=>{
+       
+        let  stopProgress=90;
         progressStartvalue++;
-        if(progressStartvalue==90){
-          clearInterval( progress);
+        if(progressStartvalue==stopProgress){
+         //Clearing the interval
+         clearInterval(progress);
         }
-        progress_value.innerHTML=progressStartvalue+"%";
-        circular_progress.style.background=`conic-gradient(#7d2ae8 ${progressStartvalue * 3.6}deg,#e9e0e0 0deg)`
-        
-      },100);
-    
-  
-      // window.addEventListener('beforeunload',progress);
-  
-      // return () => {
-      //   window.removeEventListener('beforeunload',progress );
-      // };
-    }, []);
+        else{
+          
+          progress_value.current.innerHTML=`${progressStartvalue}%`;
+          circular_progress.current.style.background =`conic-gradient(#7d2ae8 ${progressStartvalue * 3.6}deg,#e9e0e0 0deg)`
+          
+        }
 
+      },100);
+   
+      return () => clearInterval(progress);
+    
+}, [circular_progress,progress_value]);
+      
+  
+    
 
   return (
     
@@ -97,8 +98,8 @@ function App() {
               <div>
                 <nav className='icon_nav'><FontAwesomeIcon icon={faEnvelope} className='icon'/></nav>
                 
-                  <nav className='circular_progress' >
-                       <span className='progress_value' >90%</span>
+                  <nav className='circular_progress' ref={circular_progress} >
+                       <p className='progress_value' ref={progress_value}></p>
                   </nav>
 
               </div>
