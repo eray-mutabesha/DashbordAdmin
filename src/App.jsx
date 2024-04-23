@@ -6,13 +6,17 @@ import React, { useEffect,useRef} from 'react';
 function App() {
   const circular_progress= useRef(null);
   const progress_value = useRef(null);
-  
- 
+  const circular_progress_garcon= useRef(null);
+  const progress_value_garcon = useRef(null);
+  const circular_progress_fille= useRef(null);
+  const progress_value_fille = useRef(null);
+// ........................for 90%.................................................
+// ........................for 90%.................................................
   useEffect(() => {
     let  progressStartvalue=0;
       const progress=setInterval(()=>{
        
-        let  stopProgress=90;
+        let  stopProgress=101;
         progressStartvalue++;
         if(progressStartvalue==stopProgress){
          //Clearing the interval
@@ -22,7 +26,7 @@ function App() {
           
           progress_value.current.innerHTML=`${progressStartvalue}%`;
           circular_progress.current.style.background =`conic-gradient(#7d2ae8 ${progressStartvalue * 3.6}deg,#e9e0e0 0deg)`
-          
+
         }
 
       },100);
@@ -30,9 +34,57 @@ function App() {
       return () => clearInterval(progress);
     
 }, [circular_progress,progress_value]);
-      
+// .........................................................................
+// .........................................................................  
+
+// ........................for 60%.................................................
+// ........................for 6%.................................................  
+useEffect(() => {
+  let  progressStartvalue=0;
+    const progress=setInterval(()=>{
+     
+      let  stopProgress=41;
+      progressStartvalue++;
+      if(progressStartvalue==stopProgress){
+       //Clearing the interval
+       clearInterval(progress);
+      }
+      else{
+        
+        progress_value_garcon.current.innerHTML=`${progressStartvalue}%`;
+        circular_progress_garcon.current.style.background =`conic-gradient(#7d2ae8 ${progressStartvalue * 3.6}deg,#e9e0e0 0deg)`
+
+      }
+
+    },100);
+ 
+    return () => clearInterval(progress);
   
-    
+}, [circular_progress,progress_value]);
+ // ..............................for fille...........................................
+// .........................................................................   
+useEffect(() => {
+  let  progressStartvalue=0;
+    const progress=setInterval(()=>{
+     
+      let  stopProgress=61;
+      progressStartvalue++;
+      if(progressStartvalue==stopProgress){
+       //Clearing the interval
+       clearInterval(progress);
+      }
+      else{
+        
+        progress_value_fille.current.innerHTML=`${progressStartvalue}%`;
+        circular_progress_fille.current.style.background =`conic-gradient(#7d2ae8 ${progressStartvalue * 3.6}deg,#e9e0e0 0deg)`
+
+      }
+
+    },100);
+ 
+    return () => clearInterval(progress);
+  
+}, [circular_progress,progress_value]);  
 
   return (
     
@@ -41,25 +93,41 @@ function App() {
           <h1>SMS Zanner</h1>
           <div className='all_tiltles_and_icons'>
           <div>
-          <FontAwesomeIcon icon={faEnvelope} className='icon'/>
-          <p>anonce</p>
+            <nav>
+            <FontAwesomeIcon icon={faEnvelope} className='icon'/>
+            <p>Annonces</p>
+            </nav>
+          
           </div>
           <div>
-          <FontAwesomeIcon icon={faEnvelope} className='icon'/>
-          <p>anonce</p>
+            <nav>
+            <FontAwesomeIcon icon={faEnvelope} className='icon'/>
+            <p>Finance</p>
+            </nav>
+          
           </div>
           <div>
-          <FontAwesomeIcon icon={faEnvelope} className='icon'/>
-          <p>anonce</p>
+            <nav>
+            <FontAwesomeIcon icon={faEnvelope} className='icon'/>
+            <p>Eleves</p>
+            </nav>
+          
           </div>
           <div>
-          <FontAwesomeIcon icon={faEnvelope} className='icon'/>
-          <p>anonce</p>
+            <nav>
+            <FontAwesomeIcon icon={faEnvelope} className='icon'/>
+            <p>Enseignants</p>
+            </nav>
+          
           </div>
           <div>
-          <FontAwesomeIcon icon={faEnvelope} className='icon'/>
-          <p>anonce</p>
+            <nav>
+            <FontAwesomeIcon icon={faEnvelope} className='icon'/>
+            <p>Mon compt</p>
+            </nav>
+          
           </div>
+         
           <nav className='btn'>
           <button>Logout</button>
           </nav>
@@ -80,9 +148,8 @@ function App() {
             <button>lire plus</button>
           </div>
           <div className='pages_of_com'>
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
+           <nav><FontAwesomeIcon icon={faEnvelope} className='icon'/></nav>
+           <nav><FontAwesomeIcon icon={faEnvelope} className='icon'/></nav>
             </div>
           </div>
           </div>
@@ -105,14 +172,14 @@ function App() {
               </div>
               <div>
               <nav className='icon_nav'><FontAwesomeIcon icon={faEnvelope} className='icon'/></nav>
-              <nav className='circular_progress'>
-                       <span className='progress_value'>40%</span>
+              <nav className='circular_progress' ref={circular_progress_garcon}>
+                       <span className='progress_value' ref={progress_value_garcon}>40%</span>
                   </nav>
                 </div>
                 <div>
                 <nav className='icon_nav'><FontAwesomeIcon icon={faEnvelope} className='icon'/></nav>
-                <nav className='circular_progress'>
-                       <span className='progress_value'>100%</span>
+                <nav className='circular_progress'ref={circular_progress_fille}>
+                       <span className='progress_value'ref={progress_value_fille}>100%</span>
                   </nav>
                 </div>
               
