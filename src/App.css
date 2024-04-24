@@ -78,6 +78,11 @@ body{
    
    
 }
+.all_com{
+ 
+  height: 200px;
+  overflow-y:scroll;
+}
 .section_two .flex .cominique{
   background-image: url("images (1).jpg");
   background-repeat: no-repeat;
@@ -102,10 +107,9 @@ body{
   width: 100px;
   border-radius: 5px;
   color: white;
-
 }
 .pages_of_com{
-  display: flex;
+  display: none;
   border:1px solid red;
   justify-content: space-around;
   width: 100%;

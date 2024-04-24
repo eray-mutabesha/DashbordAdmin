@@ -141,12 +141,21 @@ useEffect(() => {
              Retrouvez ici le resumé de tout ce qui se passe dans votre école.</p>
           </div>
           <div className='grid'>
+            <div className='all_com'>
+            <div className='cominique'>
+            <p><strong>Communiqué du 2024-04-08 21:30:08</strong>
+            <strong>Rappel des Consignes et Soutien pour une Année Réussie</strong>
+            Chers Élèves, Nous espérons que vous vous porte...</p>
+            <button>lire plus</button>
+          </div>
           <div className='cominique'>
             <p><strong>Communiqué du 2024-04-08 21:30:08</strong>
             <strong>Rappel des Consignes et Soutien pour une Année Réussie</strong>
             Chers Élèves, Nous espérons que vous vous porte...</p>
             <button>lire plus</button>
           </div>
+            </div>
+         
           <div className='pages_of_com'>
            <nav><FontAwesomeIcon icon={faEnvelope} className='icon'/></nav>
            <nav><FontAwesomeIcon icon={faEnvelope} className='icon'/></nav>
