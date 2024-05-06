@@ -3,6 +3,13 @@ import './App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import React, { useEffect,useRef} from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import 'swiper/swiper-bundle.css'
+
+
+
+
 function App() {
   const circular_progress= useRef(null);
   const progress_value = useRef(null);
@@ -10,6 +17,8 @@ function App() {
   const progress_value_garcon = useRef(null);
   const circular_progress_fille= useRef(null);
   const progress_value_fille = useRef(null);
+  // ref for communication div
+  const all_communication_div=useRef();
 // ........................for 90%.................................................
 // ........................for 90%.................................................
   useEffect(() => {
@@ -141,19 +150,45 @@ useEffect(() => {
              Retrouvez ici le resumé de tout ce qui se passe dans votre école.</p>
           </div>
           <div className='grid'>
-            <div className='all_com'>
-            <div className='cominique'>
+            <div className='all_com' ref={all_communication_div}>
+            <Swiper
+            modules={[Navigation, Pagination, Scrollbar, A11y]}
+      spaceBetween={50}
+      navigation
+      pagination={{ clickable: true }}
+      scrollbar={{ draggable: true }}
+      slidesPerView={1.2}
+      onSlideChange={() => console.log('slide change')}
+      onSwiper={(swiper) => console.log(swiper)}
+    >
+      
+       <SwiperSlide><div className='cominique' >
             <p><strong>Communiqué du 2024-04-08 21:30:08</strong>
             <strong>Rappel des Consignes et Soutien pour une Année Réussie</strong>
             Chers Élèves, Nous espérons que vous vous porte...</p>
             <button>lire plus</button>
-          </div>
-          <div className='cominique'>
+          </div></SwiperSlide>
+      <SwiperSlide><div className='cominique' >
             <p><strong>Communiqué du 2024-04-08 21:30:08</strong>
             <strong>Rappel des Consignes et Soutien pour une Année Réussie</strong>
             Chers Élèves, Nous espérons que vous vous porte...</p>
             <button>lire plus</button>
-          </div>
+          </div></SwiperSlide>
+      <SwiperSlide><div className='cominique' >
+            <p><strong>Communiqué du 2024-04-08 21:30:08</strong>
+            <strong>Rappel des Consignes et Soutien pour une Année Réussie</strong>
+            Chers Élèves, Nous espérons que vous vous porte...</p>
+            <button>lire plus</button>
+          </div></SwiperSlide>
+      <SwiperSlide><div className='cominique' >
+            <p><strong>Communiqué du 2024-04-08 21:30:08</strong>
+            <strong>Rappel des Consignes et Soutien pour une Année Réussie</strong>
+            Chers Élèves, Nous espérons que vous vous porte...</p>
+            <button>lire plus</button>
+          </div></SwiperSlide> 
+      ...
+    </Swiper>
+       
             </div>
          
           <div className='pages_of_com'>

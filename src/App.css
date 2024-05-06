@@ -78,19 +78,27 @@ body{
    
    
 }
-.all_com{
- 
-  height: 200px;
-  overflow-y:scroll;
+.all_com {
+  width: 400px;
+  display: flex;
+  gap: 20px;
+/* border: 1px solid red; */
+/*   
+    overflow:scroll;
+  
+  height: 200px; 
+  
+  display:grid;
+  grid-template-columns: auto auto auto;  */
 }
 .section_two .flex .cominique{
   background-image: url("images (1).jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 100%; 
+   width: 350px;
   border-radius: 10px;
-  width: 400px;
+ 
   margin: 10px;
   color: rgba(255, 255, 255, 0.822);
 }
