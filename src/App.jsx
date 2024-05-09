@@ -1,7 +1,7 @@
 
 import './App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope,faTableColumns,faPersonDotsFromLine,faPersonChalkboard,faPeopleGroup,faPersonDress,faPerson} from '@fortawesome/free-solid-svg-icons'
 import React, { useEffect,useRef} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
@@ -103,35 +103,38 @@ useEffect(() => {
           <div className='all_tiltles_and_icons'>
           <div>
             <nav>
-            <FontAwesomeIcon icon={faEnvelope} className='icon'/>
+        
+            <FontAwesomeIcon icon={faEnvelope} className='icon'/> 
             <p>Annonces</p>
             </nav>
           
           </div>
           <div>
             <nav>
-            <FontAwesomeIcon icon={faEnvelope} className='icon'/>
+      
+            <FontAwesomeIcon icon={faTableColumns} className='icon'/>
             <p>Finance</p>
             </nav>
           
           </div>
           <div>
             <nav>
-            <FontAwesomeIcon icon={faEnvelope} className='icon'/>
+            <FontAwesomeIcon icon={faPersonDotsFromLine} className='icon'/>
             <p>Eleves</p>
             </nav>
           
           </div>
           <div>
             <nav>
-            <FontAwesomeIcon icon={faEnvelope} className='icon'/>
+            <FontAwesomeIcon icon={faPersonChalkboard} className='icon'/>
             <p>Enseignants</p>
             </nav>
           
           </div>
           <div>
             <nav>
-            <FontAwesomeIcon icon={faEnvelope} className='icon'/>
+            
+            <FontAwesomeIcon icon={faTableColumns} className='icon'/>
             <p>Mon compt</p>
             </nav>
           
@@ -191,10 +194,7 @@ useEffect(() => {
        
             </div>
          
-          <div className='pages_of_com'>
-           <nav><FontAwesomeIcon icon={faEnvelope} className='icon'/></nav>
-           <nav><FontAwesomeIcon icon={faEnvelope} className='icon'/></nav>
-            </div>
+         
           </div>
           </div>
           <div>
@@ -207,24 +207,29 @@ useEffect(() => {
               </nav>
               
               <div>
-                <nav className='icon_nav'><FontAwesomeIcon icon={faEnvelope} className='icon'/></nav>
-                
+                <nav className='icon_nav'><FontAwesomeIcon icon={faPeopleGroup} className='icon'/></nav>
+               
                   <nav className='circular_progress' ref={circular_progress} >
-                       <p className='progress_value' ref={progress_value}></p>
+                       <p className='progress_value' ref={progress_value}>100%</p>
+                      
                   </nav>
-
+                 <p>Total</p>
               </div>
               <div>
-              <nav className='icon_nav'><FontAwesomeIcon icon={faEnvelope} className='icon'/></nav>
+              <nav className='icon_nav'><FontAwesomeIcon icon={faPersonDress} className='icon'/></nav>
               <nav className='circular_progress' ref={circular_progress_garcon}>
-                       <span className='progress_value' ref={progress_value_garcon}>40%</span>
+              
+                     
+                       <p className='progress_value' ref={progress_value_garcon}>60%</p>
                   </nav>
+                  <p>Filles</p>
                 </div>
                 <div>
-                <nav className='icon_nav'><FontAwesomeIcon icon={faEnvelope} className='icon'/></nav>
+                <nav className='icon_nav'><FontAwesomeIcon icon={faPerson} className='icon'/></nav>
                 <nav className='circular_progress'ref={circular_progress_fille}>
-                       <span className='progress_value'ref={progress_value_fille}>100%</span>
+                       <p className='progress_value'ref={progress_value_fille}>40%</p>
                   </nav>
+                  <p>Garcons</p>
                 </div>
               
             </div>
