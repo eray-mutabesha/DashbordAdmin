@@ -44,6 +44,7 @@ body{
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   color:white;
+  cursor: pointer;
 }
 .all_tiltles_and_icons div .icon{
   margin-top:auto;
@@ -57,10 +58,11 @@ body{
   background:rgb(0, 0, 20);
   height: 30px;
   border-radius: 5px;
-  margin-top: 150px;
+  margin-top: 100px;
   margin-left: 20px;
 } 
 .all_tiltles_and_icons button:hover{
+  cursor: pointer;
    background-color: rgba(0, 0, 43, 0.788); 
    
 }
@@ -115,6 +117,7 @@ body{
   display:flex;
   justify-content:space-evenly;
   border-radius: 20px;
+  margin-top: 70px;
 }
 .all_stat div{
   width: 150px;
@@ -138,7 +141,6 @@ body{
 .all_stat div nav .icon{
  margin-top:15px;
 }
-
 .circular_progress{
   width: 100px;
   height: 100px;

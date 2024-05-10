@@ -101,7 +101,18 @@ useEffect(() => {
         <section className='section_one'>
           <h1>SMS Zanner</h1>
           <div className='all_tiltles_and_icons'>
+          <a href="#">
           <div>
+            <nav>
+      
+            <FontAwesomeIcon icon={faTableColumns} className='icon'/>
+            <p>Dashboard</p>
+            </nav>
+          
+          </div>
+          </a>
+            <a href="#">
+            <div>
             <nav>
         
             <FontAwesomeIcon icon={faEnvelope} className='icon'/> 
@@ -109,6 +120,8 @@ useEffect(() => {
             </nav>
           
           </div>
+            </a>
+          <a href="#">
           <div>
             <nav>
       
@@ -117,6 +130,8 @@ useEffect(() => {
             </nav>
           
           </div>
+          </a>
+          <a href="#">
           <div>
             <nav>
             <FontAwesomeIcon icon={faPersonDotsFromLine} className='icon'/>
@@ -124,13 +139,17 @@ useEffect(() => {
             </nav>
           
           </div>
-          <div>
+          </a>
+         <a href="#">
+         <div>
             <nav>
             <FontAwesomeIcon icon={faPersonChalkboard} className='icon'/>
             <p>Enseignants</p>
             </nav>
           
           </div>
+         </a>
+          <a href="#">
           <div>
             <nav>
             
@@ -139,6 +158,8 @@ useEffect(() => {
             </nav>
           
           </div>
+          </a>
+         
          
           <nav className='btn'>
           <button>Logout</button>
@@ -198,11 +219,11 @@ useEffect(() => {
           </div>
           </div>
           <div>
-            <h1>Statistiques des eleves</h1>
+           
             <div className='all_stat'>
               <nav>
-              <h2>Statistique</h2>
-              <p>Estimation des nos eleves fille et garcon</p>
+              <h1>Statistiques des eleves</h1>
+              <p>Estimation des nos  élèves filles et garçons</p>
               <p> </p>
               </nav>
               
@@ -213,7 +234,7 @@ useEffect(() => {
                        <p className='progress_value' ref={progress_value}>100%</p>
                       
                   </nav>
-                 <p>Total</p>
+                 <p>Total des élèves</p>
               </div>
               <div>
               <nav className='icon_nav'><FontAwesomeIcon icon={faPersonDress} className='icon'/></nav>
@@ -222,14 +243,14 @@ useEffect(() => {
                      
                        <p className='progress_value' ref={progress_value_garcon}>60%</p>
                   </nav>
-                  <p>Filles</p>
+                  <p>Total des filles</p>
                 </div>
                 <div>
                 <nav className='icon_nav'><FontAwesomeIcon icon={faPerson} className='icon'/></nav>
                 <nav className='circular_progress'ref={circular_progress_fille}>
                        <p className='progress_value'ref={progress_value_fille}>40%</p>
                   </nav>
-                  <p>Garcons</p>
+                  <p>Total des garçons</p>
                 </div>
               
             </div>
